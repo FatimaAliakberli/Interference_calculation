@@ -27,6 +27,18 @@ from importing the ITU filing to the coordination contour, border I/N check, mit
 
 ## 1. Installation & setup
 
+You can access the stresmlit page directly from this link:
+
+https://interferencecalculation-hshgqf9whaob7adiyz6u2p.streamlit.app/
+
+
+Because of data load, we were not able to add 'azerbaijan_dem.tif' to github repo (currently). So, you can accesss drive link to download that file and follow steps below to add that file to relevant location to be able to run the streamlit application succesfully:
+
+https://drive.google.com/file/d/1AmiP1aH41SAy4WtWPejTmyB9G5Kyy5AY/view?usp=sharing
+
+
+Or you can follow steps below to download the full project.
+
 ### 1.1 Install
 
 ```bash
@@ -51,6 +63,9 @@ pip install folium numpy scipy rasterio     # needed by the code but missing fro
 | `ITU_Coordination_Distance_Parameters.xlsx` | `data_sources/` | Step 3 auto-lookup (AP7 Tables 7/8/9) |
 | `ne_10m_coastline.shp` (+ `.shx .dbf .prj`) | `data_sources/costline/` or `data_sources/coastline/` | automatic radio-climatic zone and `dc` |
 | `azerbaijan_dem.tif` | `data_sources/` (or set the `LBC_DEM_PATH` environment variable) | map hillshade, P.526 diffraction recheck |
+
+
+
 
 Natural Earth country borders are **downloaded automatically** at run time (internet needed for Step 7; otherwise use manual border distances).
 
