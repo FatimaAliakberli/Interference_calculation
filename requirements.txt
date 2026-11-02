@@ -1,0 +1,30 @@
+streamlit
+pandas
+openpyxl
+geopandas
+shapely
+pyproj
+requests
+matplotlib
+
+# --- .mdb reading (core/itu_import.py) ---
+# access-parser is pure Python (no system binary / ODBC driver needed) and
+# is tried first — this is what makes the ITU import feature work on
+# Windows out of the box.
+access-parser
+
+# mdbtools' `mdb-export` CLI is used automatically as a fallback if it's on
+# PATH (e.g. on a Linux deployment target such as Streamlit Community
+# Cloud). It has no native Windows build, so it's a *fallback*, not a
+# requirement, and there is nothing to add here for it — install the
+# system package separately if you want it available:
+#   Ubuntu/Debian: sudo apt install mdbtools
+#   macOS:         brew install mdbtools
+
+# pyodbc + the Microsoft Access Database Engine Redistributable is a third,
+# optional fallback for Windows machines that already have Access (or that
+# free redistributable) installed. Uncomment if you want it available;
+# the pyodbc *bindings* install fine via pip on any OS, but the fallback is
+# only actually usable on Windows once the matching-bitness Access driver
+# is installed separately.
+# pyodbc
